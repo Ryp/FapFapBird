@@ -2,8 +2,8 @@
 #define SFMLCONTROLLER_H
 
 #include <SFML/Graphics/RenderWindow.hpp>
-#include <Vector.hpp>
 
+#include "Vector.hpp"
 #include "AController.h"
 
 class SfmlController : public AController

@@ -1,5 +1,6 @@
 #include <SFML/Window/Mouse.hpp>
 #include <SFML/Window/Keyboard.hpp>
+
 #include "SfmlController.h"
 
 SfmlController::SfmlController(sf::RenderWindow& window, const Vect2i& area)

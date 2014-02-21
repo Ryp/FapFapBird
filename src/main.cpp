@@ -4,6 +4,7 @@
 
 #include "Player.h"
 #include "PBox.h"
+#include "Joystick/SfmlController.h"
 
 int	main(int ac, char** av)
 {
@@ -17,6 +18,8 @@ int	main(int ac, char** av)
   sf::RenderWindow window(sf::VideoMode(800, 600), "FlappyMario - Schuel_t roxxe du poney");
   window.setVerticalSyncEnabled(true);
   window.setFramerateLimit(60);
+
+  SfmlController	controller(window, Vect2i());
 
   sf::Texture	flapTex;
   sf::Texture	pipeDownTex;
@@ -33,10 +36,10 @@ int	main(int ac, char** av)
   sf::Sprite	pipeUpSp(pipeUpTex);
   sf::Sprite	pipeDownSp(pipeDownTex);
 
+  flapSp.setOrigin(32.0f, 32.0f);
+
   PBox		playerBox(Vect2f(flapTex.getSize().x, flapTex.getSize().y));
   PBox		pipeBox(Vect2f(pipeDownTex.getSize().x, pipeDownTex.getSize().y));
-
-  flapSp.setOrigin(32.0f, 32.0f);
 
   while (window.isOpen())
   {
@@ -49,16 +52,18 @@ int	main(int ac, char** av)
 	window.close();
     }
     // Gamelogic
-    Vect2f a;
 
-    a += Vect2f(0.0f, -30.0f); // La gravité c'est génial.
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+    controller.update();
+
+    Vect2f accel;
+    accel += Vect2f(0.0f, -50.0f); // La gravité c'est génial.
+    if (controller.isPressed(SfmlController::UpArrow))
     {
       flap.setSpeed(Vect2f());
-      a += Vect2f(0.0f, 799.0f); // Je FLAPFLAP donc je vole.
+      accel += Vect2f(0.0f, 1000.0f); // Je FLAPFLAP donc je vole.
     }
 
-    flap.setAccel(a);
+    flap.setAccel(accel);
     flap.update(1.0f / 60.0f);
 
     float amount = flap.getSpeed()[1] * 4.0f;

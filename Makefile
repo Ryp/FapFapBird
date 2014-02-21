@@ -1,4 +1,4 @@
-NAME		=	FlappyMario
+NAME		=	FapFapBird
 
 CXX		=	g++
 
@@ -16,7 +16,9 @@ RM		=	rm -f
 
 SRC		=	src/main.cpp					\
 			src/Player.cpp					\
-			src/PBox.cpp
+			src/PBox.cpp					\
+			src/Joystick/AController.cpp			\
+			src/Joystick/SfmlController.cpp			\
 
 OBJ		=	$(SRC:.cpp=.o)
 
