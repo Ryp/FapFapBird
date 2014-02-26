@@ -16,6 +16,7 @@ RM		=	rm -f
 
 SRC		=	src/main.cpp					\
 			src/Player.cpp					\
+			src/Pipes.cpp					\
 			src/PBox.cpp					\
 			src/Joystick/AController.cpp			\
 			src/Joystick/SfmlController.cpp			\

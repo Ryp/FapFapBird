@@ -4,9 +4,9 @@ Player::Player() {}
 
 Player::~Player() {}
 
-void Player::update(float t)
+void Player::update(float dt)
 {
-  _speed += _accel * t;
+  _speed += _accel * dt;
   _pos += _speed;
 }
 

@@ -10,7 +10,7 @@ public:
   ~Player();
 
 public:
-  void		update(float t);
+  void		update(float dt);
   const Vect2f&	getPosition() const;
   void		setPosition(const Vect2f& position);
   const Vect2f&	getSpeed() const;
