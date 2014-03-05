@@ -19,8 +19,7 @@ SRC		=	src/main.cpp					\
 			src/Pipes.cpp					\
 			src/PBox.cpp					\
 			src/Joystick/AController.cpp			\
-			src/Joystick/SfmlController.cpp			\
-			src/Animation.cpp
+			src/Joystick/SfmlController.cpp
 
 OBJ		=	$(SRC:.cpp=.o)
 
