@@ -33,5 +33,6 @@ void SfmlController::update()
   _buttons[RightArrow].new_held = sf::Keyboard::isKeyPressed(sf::Keyboard::Right);
   _buttons[KeyE].new_held = sf::Keyboard::isKeyPressed(sf::Keyboard::E);
   _buttons[KeyS].new_held = sf::Keyboard::isKeyPressed(sf::Keyboard::S);
+  _buttons[Esc].new_held = sf::Keyboard::isKeyPressed(sf::Keyboard::Escape);
   AController::update();
 }

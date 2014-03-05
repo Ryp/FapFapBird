@@ -17,13 +17,14 @@ public:
     LeftArrow,
     RightArrow,
     KeyE,
-    KeyS
+    KeyS,
+    Esc
   };
   enum Axes {
     MousePosX = 0,
     MousePosY
   };
-  static const int TotalButtonsNumber = 8;
+  static const int TotalButtonsNumber = 9;
   static const int TotalAxesNumber = 2;
 
 public:
