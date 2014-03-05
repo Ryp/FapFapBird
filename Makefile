@@ -20,6 +20,7 @@ SRC		=	src/main.cpp					\
 			src/PBox.cpp					\
 			src/Joystick/AController.cpp			\
 			src/Joystick/SfmlController.cpp			\
+			src/Animation.cpp
 
 OBJ		=	$(SRC:.cpp=.o)
 
